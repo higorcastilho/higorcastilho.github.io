@@ -1,0 +1,48 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Document</title>
+</head>
+<body>
+	
+
+<style>
+	#content {
+	  height: 800px;
+	  width: 100%;
+}
+</style>
+</head>
+<body>
+  <div id="content">  	
+  </div>
+
+	<button id="activate-modal">click me </button>
+	<div class="bg-modal">
+		<div class="modal-content">
+			<div class="close">+</div>
+			<!-- slider entra aqui -->
+		</div>
+	</div>
+<script>
+
+window.onload = () => {
+	window.addEventListener("scroll", myFunction)
+}
+
+function myFunction() {
+  var elmnt = document.getElementsByTagName("BODY")[0];
+  var y = elmnt.scrollTop;
+  console.log(y)
+  if ( y > 100) {
+  	document.querySelector(".bg-modal").style.display = "flex"
+  }
+}
+</script>
+
+	<script type="text/javascript" src="actions.js"></script>
+</body>
+</html>
